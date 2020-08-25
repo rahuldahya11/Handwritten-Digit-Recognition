@@ -44,3 +44,7 @@ hist = model.fit(x_train, y_train,batch_size=batch_size,epochs=epochs,verbose=1,
 print("The model has successfully trained")
 model.save('mnist.h5')
 print("Saving the model as mnist.h5")
+
+score = model.evaluate(x_test, y_test, verbose=0)
+print('Test loss:', score[0])
+print('Test accuracy:', score[1])
